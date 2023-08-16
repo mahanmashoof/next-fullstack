@@ -1,4 +1,4 @@
-# CSS:
+## CSS:
 
 gap
 object-fit
@@ -6,9 +6,13 @@ object-fit
 flex: 1
 animation
 
-# next.config.js
+## layout
 
-## allowing external images
+ex: protfolio
+
+## next.config.js
+
+### allowing external images
 
 ```
 const nextConfig = {
@@ -18,17 +22,17 @@ const nextConfig = {
 };
 ```
 
-# context
+## context
 
 create/use context
 
-# Data fetching
+## Data fetching
 
-## server side
+### server side
 
 getData function
 notFound()
 
-## client side
+### client side
 
 swr
