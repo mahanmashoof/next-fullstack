@@ -22,7 +22,13 @@ const nextConfig = {
 
 create/use context
 
-# server side fetching
+# Data fetching
+
+## server side
 
 getData function
 notFound()
+
+## client side
+
+swr
