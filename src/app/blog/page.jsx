@@ -1,43 +1,43 @@
-"use client";
-
 import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
-const Blog = () => {
+const getData = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    next: { revalidate: 10 },
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch blog data");
+  }
+  return res.json();
+};
+
+const Blog = async () => {
+  const data = await getData();
   return (
     <div className={styles.mainContainer}>
-      <Link href="/blog/testid" className={styles.container}>
-        <div className={styles.imageContainer}>
-          <Image
-            src="/1.png"
-            alt=""
-            width={400}
-            height={250}
-            className={styles.image}
-          />
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>Title</h1>
-          <p className={styles.desc}>descr</p>
-        </div>
-      </Link>
-      <Link href="/blog/testid2" className={styles.container}>
-        <div className={styles.imageContainer}>
-          <Image
-            src="/2.png"
-            alt=""
-            width={400}
-            height={250}
-            className={styles.image}
-          />
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>Title</h1>
-          <p className={styles.desc}>descr</p>
-        </div>
-      </Link>
+      {data.map((item) => (
+        <Link
+          href={`blog/${item.id}`}
+          className={styles.container}
+          key={item.id}
+        >
+          <div className={styles.imageContainer}>
+            <Image
+              src="/1.png"
+              alt=""
+              width={400}
+              height={250}
+              className={styles.image}
+            />
+          </div>
+          <div className={styles.content}>
+            <h1 className={styles.title}>{item.title}</h1>
+            <p className={styles.desc}>descr</p>
+          </div>
+        </Link>
+      ))}
     </div>
   );
 };
