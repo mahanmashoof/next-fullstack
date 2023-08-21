@@ -36,3 +36,9 @@ notFound()
 ### client side
 
 swr
+
+## Mongo db
+
+src/utils/db.js
+src/models/
+src/app/api
