@@ -31,7 +31,6 @@ const Register = () => {
         router.push("/dashboard/login?success=Account has been created");
     } catch (err) {
       setError(err);
-      console.log("error: ", err);
     }
   };
 

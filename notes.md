@@ -52,7 +52,7 @@ src/app/blog/[id]/page (dynamic)
 
 ### google
 
-src/app/api/auth
+src/app/api/auth/[...nextauth]
 SessionProvider => authprovider (since if using "use client" in layout.js, the metadata can't be used anymore => prevents SSR)
 src/components/authProvider
 src/app/dashboard/(auth)/login
@@ -61,3 +61,5 @@ src/app/dashboard/(auth)/login
 
 src/app/dashboard/(auth)/register
 src/app/api/auth/register
+src/app/api/auth/[...nextauth]
+src/app/dashboard/(auth)/login
