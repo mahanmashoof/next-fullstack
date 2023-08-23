@@ -50,6 +50,8 @@ src/app/blog/[id]/page (dynamic)
 
 ## auth
 
+### google
+
 src/app/api/auth
 SessionProvider => authprovider (since if using "use client" in layout.js, the metadata can't be used anymore => prevents SSR)
 src/components/authProvider
