@@ -45,5 +45,12 @@ src/app/api
 
 ## meta data
 
-src/contact/page (static)
-src/blog/[id]/page (dynamic)
+src/app/contact/page (static)
+src/app/blog/[id]/page (dynamic)
+
+## auth
+
+src/app/api/auth
+SessionProvider => authprovider (since if using "use client" in layout.js, the metadata can't be used anymore => prevents SSR)
+src/components/authProvider
+src/app/dashboard/(auth)/login
