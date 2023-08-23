@@ -56,3 +56,8 @@ src/app/api/auth
 SessionProvider => authprovider (since if using "use client" in layout.js, the metadata can't be used anymore => prevents SSR)
 src/components/authProvider
 src/app/dashboard/(auth)/login
+
+### email & password
+
+src/app/dashboard/(auth)/register
+src/app/api/auth/register
