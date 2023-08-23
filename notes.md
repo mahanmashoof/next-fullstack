@@ -42,3 +42,8 @@ swr
 src/utils/db.js
 src/models/
 src/app/api
+
+## meta data
+
+src/contact/page (static)
+src/blog/[id]/page (dynamic)
