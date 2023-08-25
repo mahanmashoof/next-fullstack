@@ -67,3 +67,7 @@ src/app/dashboard/(auth)/login
 ### signout
 
 src/components/navbar
+
+### route protection
+
+src/app/dashboard
