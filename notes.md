@@ -63,3 +63,7 @@ src/app/dashboard/(auth)/register
 src/app/api/auth/register
 src/app/api/auth/[...nextauth]
 src/app/dashboard/(auth)/login
+
+### signout
+
+src/components/navbar
