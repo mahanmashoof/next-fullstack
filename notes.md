@@ -71,3 +71,13 @@ src/components/navbar
 ### route protection
 
 src/app/dashboard
+
+### create new blogs with signed in user
+
+src/app/dashboard
+src/app/api/posts
+
+### delete blog
+
+src/app/api/posts/[id]
+src/app/dashboard

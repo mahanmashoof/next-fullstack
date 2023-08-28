@@ -13,3 +13,15 @@ export const GET = async (request, { params }) => {
     return new NextResponse("connection to db failed", { status: 500 });
   }
 };
+
+export const DELETE = async (request, { params }) => {
+  const { id } = params;
+  //delete from mongo db
+  try {
+    await connect();
+    await Post.findByIdAndDelete(id);
+    return new NextResponse("post has been deleted", { status: 200 });
+  } catch (error) {
+    return new NextResponse("connection to db failed", { status: 500 });
+  }
+};
